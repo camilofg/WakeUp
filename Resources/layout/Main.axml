@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="vertical">
+  <TableLayout
+        android:id="@+id/LayoutBtns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TableRow>
+      <Button
+          android:id="@+id/BtnConfig"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Config" />
+      <Button
+          android:id="@+id/BtnAlarms"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Alarms" />
+    </TableRow>
+  </TableLayout>
+  <ViewFlipper
+        android:id="@+id/ViewFlipper01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <!--adding views to ViewFlipper-->
+    <TableLayout
+           android:id="@+id/LayoutConfig"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:stretchColumns="1">
+      <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:text="*Name:"
+            android:padding="3dip" />
+        <EditText
+            android:hint="Example: Home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TxtName" />
+      </TableRow>
+      <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:text="Remeber:"
+            android:padding="3dip" />
+        <EditText
+            android:hint="Example: Buy Milk(optional)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TxtRemember" />
+      </TableRow>
+      <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:text="Initial Hour:"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="1"
+            android:id="@+id/InitialHour" />
+      </TableRow>
+      <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:text="Finish Hour:"
+            android:padding="3dip" />
+        <TextView
+            android:layout_column="1"
+            android:id="@+id/FinishHour" />
+      </TableRow>
+      <TableRow
+          android:id="@+id/tableRow1">
+        <Button
+            android:text="Set Position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/GetPositionBtn" />
+        <Button
+            android:id="@+id/BtnClean"
+            android:text="Clean" />
+      </TableRow>
+      <TableRow>
+        <Button
+            android:id="@+id/BtnAlarm"
+            android:text="Alarm" />
+        <Button
+            android:id="@+id/BtnRead"
+            android:text="Read File" />
+      </TableRow>
+      <TableRow>
+      </TableRow>
+      <TableRow>
+        <TextView
+            android:layout_column="0"
+            android:padding="3dip"
+            android:id="@+id/TxtArchivo" />
+        <TextView
+            android:padding="3dip"
+            android:id="@+id/TxtPrueba" />
+      </TableRow>
+    </TableLayout>
+    <TableLayout
+           android:id="@+id/LayoutFirst"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:stretchColumns="1">
+      <TextView
+          android:id="@+id/TextView02"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Second view is now displayed" />
+      <Button
+          android:text="Btn2" />
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/LayoutFirst"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1">
+      <TextView
+          android:id="@+id/TextView03"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Third view is now displayed" />
+      <Button
+          android:text="Btn3" />
+    </TableLayout>
+  </ViewFlipper>
+</LinearLayout>
